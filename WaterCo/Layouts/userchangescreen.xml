@@ -1,0 +1,544 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:layout_centerHorizontal="true"
+    android:background="@drawable/secondback" >
+
+    <FrameLayout
+        android:id="@+id/frameLayout1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:background="@color/clrblue" >
+
+        <ImageView
+            android:id="@+id/imgwaterco"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/hello_world"
+            android:src="@drawable/watercologo" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:layout_gravity="left|center_horizontal"
+            android:orientation="vertical" >
+<!-- 
+            <TextView
+                android:id="@+id/txttime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_marginRight="10dp"
+                android:text="@string/time"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="@color/white" />
+                 -->
+
+            <TextView
+                android:id="@+id/txtdate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_marginRight="10dp"
+                android:text="@string/date"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="@color/white" />
+        </LinearLayout>
+    </FrameLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:background="@color/clrblue"
+        android:baselineAligned="true" 
+        android:orientation="vertical" >
+        
+        <ImageView
+            android:id="@+id/imageView2"            
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:contentDescription="@string/hello_world"
+            android:padding="5dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/aquasmall"  />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/frameLayout1"
+        android:layout_marginTop="2dp"
+        android:background="@color/green"
+        android:baselineAligned="false" >
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="left"
+            android:layout_weight="1"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/txtvaluepooltmp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="@string/valpool"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/white" />
+
+            <TextView
+                android:id="@+id/txtlabelpooltmp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="@string/lblpool"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="@color/white" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/txtvaluespatmp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="@string/valspa"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/white" />
+
+            <TextView
+                android:id="@+id/txtlabelspatmp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="@string/lblspa"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="@color/white" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="right"
+            android:layout_weight="1"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/txtvaluesolartmp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="@string/valsolar"
+                android:textAppearance="?android:attr/textAppearanceMedium"                
+                android:textColor="@color/white" />
+
+            <TextView
+                android:id="@+id/txtlabelsolartmp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="@string/lblsolar"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="@color/white" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/linearLayout1" >
+
+      <!--   <Button
+            android:id="@+id/newuser"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/squre_button_on"
+            android:text="New User"
+            android:textColor="@color/clrblue" />
+
+ -->
+        <Button
+            android:id="@+id/edituser"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/squre_button_on"
+            android:text="Edit User"
+            android:textColor="@color/clrblue" />
+
+        <Button
+            android:id="@+id/systemsetting"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/squre_button_on"
+            android:text="System Setting"
+            android:textColor="@color/clrblue" />
+    </LinearLayout>
+<!-- 
+    <FrameLayout
+        android:id="@+id/frmnewuser"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/linearLayout3"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/linearLayout2" >
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="true"
+            
+            android:gravity="center_horizontal" >
+
+            <EditText
+                android:id="@+id/edtpass"
+                android:layout_width="230dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/edtnewid"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="17dp"
+                android:background="@color/fontcolor"
+                android:ems="10"
+                android:hint="Enter Password"
+                android:inputType="textPassword"
+                android:padding="10dp"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white" />
+
+            <EditText
+                android:id="@+id/edtnewid"
+                android:layout_width="230dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="15dp"
+                android:background="@color/fontcolor"
+                android:ems="10"
+                android:hint="Enter New Username"
+                android:inputType="textPersonName"
+                android:padding="10dp"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white" >
+
+                <requestFocus />
+            </EditText>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentRight="true" >
+
+                <Button
+                    android:id="@+id/btnnewusercacel"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/operation_btn_style"
+                    android:textColor="@color/clrblue"
+                    android:text="@string/btn_cancel" />
+
+                <Button
+                    android:id="@+id/btnnewusercreate"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/operation_btn_style"
+                    android:textColor="@color/clrblue"
+                    android:text="@string/btn_create" />
+            </LinearLayout>
+
+        </RelativeLayout>
+    </FrameLayout>
+	
+	  -->
+	
+    <FrameLayout
+        android:id="@+id/frmupdateuser"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/linearLayout3"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/linearLayout2" >
+        
+        
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_horizontal" >
+            
+            <EditText
+                android:id="@+id/edtoldpass"
+                android:layout_width="230dp"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="17dp"
+                android:background="@color/fontcolor"
+                android:ems="10"
+                android:hint="Enter Old Password"
+                android:inputType="textPassword"
+                android:padding="10dp"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white" >
+                
+                </EditText>
+            
+            <EditText
+                android:id="@+id/edtnewpass"
+                android:layout_width="230dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/edtoldpass"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="17dp"
+                android:background="@color/fontcolor"
+                android:ems="10"
+                android:hint="Enter New Password"
+                android:inputType="textPassword"
+                android:padding="10dp"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white" />
+            
+            <EditText
+                android:id="@+id/edtconnewpass"
+                android:layout_width="230dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/edtnewpass"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="17dp"
+                android:background="@color/fontcolor"
+                android:ems="10"
+                android:hint="Confirm New Password"
+                android:inputType="textPassword"
+                android:padding="10dp"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white" />
+            
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentRight="true" >
+
+                <Button
+                    android:id="@+id/btnupdatecacel"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/operation_btn_style"
+                    android:textColor="@color/clrblue"
+                    android:text="@string/btn_cancel" />
+
+                <Button
+                    android:id="@+id/btnupdateuser"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/operation_btn_style"  
+                    android:textColor="@color/clrblue"                  
+                    android:text="@string/btn_update" />
+            </LinearLayout>
+            
+            
+            
+        </RelativeLayout>
+        
+    </FrameLayout>
+ 
+     
+    
+    <FrameLayout
+        android:id="@+id/frmcontrolset"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/linearLayout3"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/linearLayout2" >
+
+         <RelativeLayout
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             android:gravity="center_horizontal" >
+
+          <LinearLayout
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_centerHorizontal="true"
+              android:orientation="vertical" >
+                    
+              <LinearLayout
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_marginTop="10dp"
+                 android:orientation="vertical" >
+
+                     <TextView
+                         android:id="@+id/txtslidecount"
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:text="System IP Address :"
+                         android:textColor="@color/clrblue"
+                         android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                     
+                     <EditText
+                  android:id="@+id/edtsystemip"
+                  android:layout_width="230dp"
+                  android:layout_height="wrap_content"
+                  android:background="@color/fontcolor"
+                  android:ems="10"
+                  android:hint="System IP Address"
+                  android:inputType="text"
+                  android:padding="10dp"
+                  android:textColor="@color/white"
+                  android:textColorHint="@color/white" >
+                
+         </EditText>
+             </LinearLayout>
+             
+            <LinearLayout
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_marginTop="10dp"
+                 android:orientation="vertical" >
+
+                     <TextView
+                         android:id="@+id/textView2"
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:text="System Port Number:"
+                         android:textColor="@color/clrblue"
+                         android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                     
+                    <EditText
+                  android:id="@+id/edtsystemport"
+                  android:layout_width="230dp"
+                  android:layout_height="wrap_content"
+                  android:layout_below="@+id/edtsystemip"
+                  
+                  
+                  android:background="@color/fontcolor"
+                  android:ems="10"
+                  android:hint="System Port Address"
+                  android:inputType="number"
+                  android:padding="10dp"
+                  android:textColor="@color/white"
+                  android:textColorHint="@color/white" >
+                
+         </EditText>
+                
+         
+             </LinearLayout>     
+                
+                
+             <LinearLayout
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_marginTop="10dp"
+                 android:orientation="vertical" >
+
+                 <TextView
+                     android:id="@+id/textView3"
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:text="Client ID :"
+                     android:textAppearance="?android:attr/textAppearanceMedium"
+                     android:textColor="@color/clrblue" />
+                 
+                  <EditText
+                      android:id="@+id/edtclientid"
+                      android:layout_width="230dp"
+                      android:layout_height="wrap_content"
+                      android:layout_centerHorizontal="true"
+                      android:background="@color/fontcolor"
+                      android:ems="10"
+                      android:hint="Client ID"
+                      android:inputType="text"
+                      android:padding="10dp"
+                      android:textColor="@color/white"
+                      android:textColorHint="@color/white" >
+                
+         </EditText>
+                 
+                 
+                 </LinearLayout>
+                
+             
+                  
+             <LinearLayout
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_marginTop="10dp"
+                 android:orientation="vertical" >
+                   
+                  </LinearLayout>
+             
+                
+            </LinearLayout>
+            
+          
+          
+          <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentRight="true" >
+
+                <Button
+                    android:id="@+id/btnsettingcacel"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/operation_btn_style"
+                    android:textColor="@color/clrblue"
+                    android:text="@string/btn_cancel" />
+
+                <Button
+                    android:id="@+id/btnsettingupdate"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/operation_btn_style"
+                    android:textColor="@color/clrblue"
+                    android:text="@string/btn_update" />
+            </LinearLayout>
+          
+          
+          
+             
+            </RelativeLayout>
+        
+        </FrameLayout>
+    
+</RelativeLayout>

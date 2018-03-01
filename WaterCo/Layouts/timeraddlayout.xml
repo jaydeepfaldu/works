@@ -1,0 +1,531 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" 
+    >
+
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/squre_button_on"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginTop="10dp"
+            android:text="Add Timer"
+            android:textStyle="bold"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@color/white" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_weight="0.88"     
+            android:paddingLeft="5dp"
+            	android:paddingRight="5dp"       
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:paddingLeft="5dp"       
+                android:textColor="@color/clrblue"         
+                android:text="Timer Function :" />
+
+           <RelativeLayout
+               android:layout_width="fill_parent"
+               android:layout_height="wrap_content"
+               android:padding="10dp"
+               android:background="@drawable/squre_button" >
+
+               <Spinner
+                   android:id="@+id/drwtimerfunction"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"                   
+                   android:background="@null"
+                    />
+
+               <ImageView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_alignParentRight="true"                   
+                   android:layout_centerVertical="true"
+                   android:src="@drawable/dropdown" />
+           </RelativeLayout>
+         
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp" >
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginRight="5dp"
+                android:layout_weight="1"
+                android:background="@color/midumblue"
+                android:paddingLeft="5dp"
+            	android:paddingRight="5dp"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/textView3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp"
+                    android:paddingLeft="5dp"
+                    android:textColor="@color/clrblue"
+                    android:text="Start Time :" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" >
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical" >
+
+                        <Button
+                            android:id="@+id/btnshinc"
+                            style="?android:attr/buttonStyleSmall"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/operation_btn_style"
+                            android:padding="10dp"
+                            android:textColor="@color/clrblue"
+                            android:textStyle="bold"                            
+                            android:text="+" />
+
+                        <TextView
+                            android:id="@+id/txtsh"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="12"
+                            android:textColor="@color/clrblue"
+                            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+                        <Button
+                            android:id="@+id/btnshdec"
+                            style="?android:attr/buttonStyleSmall"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/operation_btn_style"
+                             android:textColor="@color/clrblue"
+                            android:textStyle="bold"                            
+                            android:text="-" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical" >
+
+                        <Button
+                            android:id="@+id/btnpoolupcelsius"
+                            style="?android:attr/buttonStyleSmall"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="10dp"
+                            android:background="@drawable/operation_btn_style"
+                             android:textColor="@color/clrblue"
+                            android:textStyle="bold"                            
+                            android:text="+" />
+
+                        <TextView
+                            android:id="@+id/txtpoolcelsius"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="12"
+                            android:textColor="@color/clrblue"
+                            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+                        <Button
+                            android:id="@+id/btnpooldowncelsius"
+                            style="?android:attr/buttonStyleSmall"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/operation_btn_style"
+                             android:textColor="@color/clrblue"
+                            android:textStyle="bold"                            
+                            android:text="-" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical" >
+
+                        <Button
+                            android:id="@+id/btnsam"
+                            style="?android:attr/buttonStyleSmall"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="10dp"
+                            android:background="@drawable/operation_btn_style"
+                             android:textColor="@color/clrblue"                                                    
+                            android:text="AM" />
+
+                        <TextView
+                            android:id="@+id/txtsampm"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="AM"
+                            android:textColor="@color/clrblue"
+                            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+                        <Button
+                            android:id="@+id/btnspm"
+                            style="?android:attr/buttonStyleSmall"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/operation_btn_style"
+                             android:textColor="@color/clrblue"                                                   
+                            android:text="PM" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="5dp"
+                android:layout_weight="1"
+                android:background="@color/midumblue"
+                android:paddingLeft="5dp"
+            	android:paddingRight="5dp"
+            	android:paddingBottom="5dp"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/textView4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp"
+                    android:paddingLeft="5dp"
+                    android:textColor="@color/clrblue"
+                    android:text="Stop Time :" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" >
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical" >
+
+                        <Button
+                            android:id="@+id/btnspaupcelsius"
+                            style="?android:attr/buttonStyleSmall"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="10dp"
+                            android:background="@drawable/operation_btn_style"
+                            android:textColor="@color/clrblue"
+                            android:textStyle="bold"
+                            android:text="+" />
+
+                        <TextView
+                            android:id="@+id/txtspacelsius"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="12"
+                            android:textColor="@color/clrblue"
+                            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+                        <Button
+                            android:id="@+id/btnspadowncelsius"
+                            style="?android:attr/buttonStyleSmall"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/operation_btn_style"
+                            android:textColor="@color/clrblue"
+                            android:textStyle="bold"
+                            android:text="-" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical" >
+
+                        <Button
+                            android:id="@+id/btnspminc"
+                            style="?android:attr/buttonStyleSmall"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/operation_btn_style"
+                            android:padding="10dp"
+                            android:textColor="@color/clrblue"
+                            android:textStyle="bold"
+                            android:text="+" />
+
+                        <TextView
+                            android:id="@+id/txtspm"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="12"
+                            android:textColor="@color/clrblue"
+                            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+                        <Button
+                            android:id="@+id/btnspmdec"
+                            style="?android:attr/buttonStyleSmall"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/operation_btn_style"
+                            android:textColor="@color/clrblue"
+                            android:textStyle="bold"
+                            android:text="-" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical" >
+
+                        <Button
+                            android:id="@+id/btnspam"
+                            style="?android:attr/buttonStyleSmall"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/operation_btn_style"
+                            android:padding="10dp"
+                            android:textColor="@color/clrblue"
+                            
+                            android:text="AM" />
+
+                        <TextView
+                            android:id="@+id/txtspampm"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="AM"
+                            android:textColor="@color/clrblue"
+                            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+                        <Button
+                            android:id="@+id/btnsppm"
+                            style="?android:attr/buttonStyleSmall"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/operation_btn_style"
+                            android:textColor="@color/clrblue"
+                            
+                            android:text="PM" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:layout_marginTop="10dp" >
+
+            <CheckedTextView
+                android:id="@+id/checksolar"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:background="@drawable/checklayout"
+                android:checked="true"
+                android:gravity="center"
+                android:padding="10dp"                
+                android:text="SUN"
+                android:textColor="@color/gray"
+                android:textSize="10dp" >
+            </CheckedTextView>
+
+            <CheckedTextView
+                android:id="@+id/checkgas"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/checklayout"
+                android:layout_gravity="center"                
+                android:gravity="center"
+                android:padding="10dp"
+                android:checked="true"
+                android:text="MON"
+                android:textColor="@color/gray"
+                android:textSize="10dp" >
+            </CheckedTextView>
+
+            <CheckedTextView
+                android:id="@+id/checktue"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:background="@drawable/checklayout"             
+                android:gravity="center"
+                android:padding="10dp"
+                android:checked="true"
+                android:text="TUE"
+                android:textColor="@color/gray"
+                android:textSize="10dp" >
+            </CheckedTextView>
+
+            <CheckedTextView
+                android:id="@+id/checkswed"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:background="@drawable/checklayout"                
+                android:padding="10dp"
+                android:gravity="center"
+                android:checked="true"
+                android:text="WED"
+                android:textColor="@color/gray"
+                android:textSize="10dp" >
+            </CheckedTextView>
+
+            <CheckedTextView
+                android:id="@+id/checkthu"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:background="@drawable/checklayout"                
+                android:padding="10dp"
+                android:checked="true"
+                android:gravity="center"
+                android:text="THU"
+                android:textColor="@color/gray"
+                android:textSize="10dp" >
+            </CheckedTextView>
+
+            <CheckedTextView
+                android:id="@+id/checkheat"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:background="@drawable/checklayout"                
+                android:padding="10dp"
+                android:checked="true"
+                android:gravity="center"
+                android:text="FRI"
+                android:textColor="@color/gray"
+                android:textSize="10dp" >
+            </CheckedTextView>
+
+            <CheckedTextView
+                android:id="@+id/checksat"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:background="@drawable/checklayout"                
+                android:padding="10dp"
+                android:checked="true"
+                android:gravity="center"
+                android:text="SAT"
+                android:textColor="@color/gray"
+                android:textSize="10dp" >
+            </CheckedTextView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" 
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp">
+
+            <Button
+                android:id="@+id/btncancel"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/operation_btn_style"
+                android:text="@string/Everyday"
+                
+                android:textColor="@color/clrblue"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp" 
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:layout_marginBottom="10dp" >
+
+            <Button
+                android:id="@+id/btntimercancel"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                 android:background="@drawable/operation_btn_style"
+                 android:textColor="@color/clrblue"
+				
+                android:text="@string/btn_cancel" />
+
+            <Button
+                android:id="@+id/btnsolardemand"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/operation_btn_style"
+                android:textColor="@color/clrblue"
+                
+                android:text="Active" />
+
+            <Button
+                android:id="@+id/btngasdemand"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/operation_btn_style"
+                android:textColor="@color/clrblue"
+                
+                android:text="Delete" />
+
+            <Button
+                android:id="@+id/btnheatdemand"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/operation_btn_style"
+                android:textColor="@color/clrblue"
+                
+                android:text="Save Timer" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>
