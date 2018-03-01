@@ -1,0 +1,65 @@
+package com.hns.database;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+
+public class Connect {
+	
+	private Connection con ;
+	private Statement stmt ;
+	//private ResultSet rs ;
+	
+	public Connect()
+	{
+		try
+		{			
+			
+			Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
+			
+			con = DriverManager.getConnection("jdbc:sqlserver://localhost:1433;databaseName=hnsas","myauth","Jay@1989");
+			
+			stmt = con.createStatement();
+			
+		}
+		catch(Exception e)
+		{
+			System.out.println("Error in class.forname"+e.getMessage());
+		}
+	}
+	
+	public ResultSet getData(String query)
+	{
+	
+		ResultSet rs  = null;
+		
+		try
+		{
+			rs = stmt.executeQuery(query);
+		}
+		catch(Exception e)
+		{
+			System.out.println("Error in getData" + e);
+			
+		}
+		
+		return rs;
+	}
+	
+	public void interData(String query)
+	{
+		try {
+			stmt.execute(query);
+		} catch (SQLException e) {
+			System.out.println("Error in interData" + e); 
+		}
+	}
+	
+	
+	
+	
+	
+	
+}
